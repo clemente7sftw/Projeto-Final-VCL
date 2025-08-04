@@ -21,6 +21,8 @@ type
     Botão: TButton;
     LabelUsuario: TLabel;
     LabelSenha: TLabel;
+
+    procedure BotãoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,10 +32,26 @@ type
 var
   Form1: TForm1;
 
+
 implementation
 
 {$R *.dfm}
 
 
 
+procedure TForm1.BotãoClick(Sender: TObject);
+var UsuarioDigitado, UsuarioCorreto, SenhaDigitada, SenhaCorreta: String;
+begin
+ UsuarioCorreto:='Admin';
+  SenhaCorreta:='1234';
+  UsuarioDigitado := inptuser.text;
+  SenhaDigitada := inptsenha.text;
+  if ((UsuarioCorreto = UsuarioDigitado) and (SenhaCorreta = SenhaDigitada )) then begin
+    showmessage('Acesso Permitido')
+    end else
+    showmessage ('acesso negado')
+  end;
 end.
+
+end.
+
