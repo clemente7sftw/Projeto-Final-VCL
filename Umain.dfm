@@ -20,7 +20,6 @@
     Color = clSilver
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = -8
     object fundoform: TPanel
       Left = 671
       Top = 1
@@ -30,7 +29,6 @@
       Color = 4989219
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 672
       object Loginmsg: TLabel
         Left = 680
         Top = 104
@@ -58,8 +56,6 @@
         Color = 9321279
         ParentBackground = False
         TabOrder = 0
-        ExplicitLeft = 809
-        ExplicitTop = 104
         object LabelSistema: TLabel
           Left = 120
           Top = 72
@@ -101,9 +97,9 @@
         end
         object inptuser: TEdit
           Left = 88
-          Top = 256
+          Top = 260
           Width = 281
-          Height = 49
+          Height = 23
           Color = 14324636
           TabOrder = 0
         end
@@ -111,7 +107,7 @@
           Left = 88
           Top = 400
           Width = 281
-          Height = 49
+          Height = 23
           Color = 14324636
           TabOrder = 1
         end
@@ -128,6 +124,7 @@
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 2
+          OnClick = BotãoClick
         end
       end
     end
