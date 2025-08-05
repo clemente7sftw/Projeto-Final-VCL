@@ -3,7 +3,7 @@ unit Umain;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,Umain2, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Skia, Vcl.StdCtrls,
   Vcl.Imaging.pngimage;
 
@@ -13,16 +13,15 @@ type
     FundoImg: TPanel;
     Image1: TImage;
     fundoform: TPanel;
-    Formul·rio: TPanel;
+    Formul√°rio: TPanel;
     Loginmsg: TLabel;
     LabelSistema: TLabel;
     inptuser: TEdit;
     inptsenha: TEdit;
-    Bot„o: TButton;
+    Bot√£o: TButton;
     LabelUsuario: TLabel;
     LabelSenha: TLabel;
-
-    procedure Bot„oClick(Sender: TObject);
+    procedure Bot√£oClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,15 +30,15 @@ type
 
 var
   Form1: TForm1;
-
-
+  Form2: TForm2;
 implementation
 
 {$R *.dfm}
 
 
 
-procedure TForm1.Bot„oClick(Sender: TObject);
+
+procedure TForm1.Bot√£oClick(Sender: TObject);
 var UsuarioDigitado, UsuarioCorreto, SenhaDigitada, SenhaCorreta: String;
 begin
  UsuarioCorreto:='Admin';
@@ -47,11 +46,14 @@ begin
   UsuarioDigitado := inptuser.text;
   SenhaDigitada := inptsenha.text;
   if ((UsuarioCorreto = UsuarioDigitado) and (SenhaCorreta = SenhaDigitada )) then begin
-    showmessage('Acesso Permitido')
+    showmessage('Acesso Permitido');
+    Form2 := TForm2.Create(Self);
+    Form2.Align := alClient;
+    Form2.Show;
     end else
     showmessage ('acesso negado')
   end;
-end.
 
 end.
 
+end.
