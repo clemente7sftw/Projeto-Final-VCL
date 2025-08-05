@@ -98,7 +98,11 @@ begin
     BtnAtu.Visible := True;
     BtnExc.Visible := True;
     ListaAlu.Visible := True;
-    BtnCód.Visible := True
+    BtnCód.Visible := True;
+    ListaAlu.Items.Clear;
+    ListaAlu.Items.Add('Ana Silva');
+    ListaAlu.Items.Add('Carlos Souza');
+    ListaAlu.Items.Add('Mariana Costa');
 
 end;
 
@@ -116,6 +120,10 @@ begin
     BtnAdd.Visible := True;
     BtnAtu.Visible := True;
     BtnExc.Visible := True;
+    ListaAlu.Items.Clear; ///limpa lista
+    ListaAlu.Items.Add('');
+    ListaAlu.Items.Add('');
+    ListaAlu.Items.Add('');
 end;
 
 procedure TForm2.PturmasClick(Sender: TObject);
