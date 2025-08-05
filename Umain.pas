@@ -22,6 +22,7 @@ type
     LabelUsuario: TLabel;
     LabelSenha: TLabel;
     procedure BotãoClick(Sender: TObject);
+    procedure inptsenhaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,6 +54,11 @@ begin
     end else
     showmessage ('acesso negado')
   end;
+
+procedure TForm1.inptsenhaChange(Sender: TObject);
+begin
+    inptsenha.PasswordChar := '*';
+end;
 
 end.
 
